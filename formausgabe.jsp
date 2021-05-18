@@ -7,6 +7,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>HTML-Formularausgabe mittels JSP, Servlet und JavaBean</title>
+		<base href="${pageContext.request.requestURI}"/>
 	</head>
 	<body>
 		<%-- Fehler provozieren
