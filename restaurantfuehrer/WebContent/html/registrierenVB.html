@@ -1,38 +1,69 @@
 <!DOCTYPE html>
-<html>
+<html lang="de">
 	<head>
 	  <meta charset="UTF-8">
-	  <title>Registrierung</title>
+	  <link rel="stylesheet" href="../CSS/styleRegister.css" type="text/css">
 	</head>
 	<body>
-		<form id="registrieren" method="post" action="registrierenservlet">
-			<label for="titel">Titel:</label>
-			  <input type="text" list="titelList" name="titel" id="titel" autofocus>
-			<label for="titel"></label>
-				<datalist id="titelList">
-					<option value="Herr">
-					<option value="Frau">
-				</datalist><br>
-			<br><label for="nname">Name:</label>
-			  <input type="text" name="nname" id="nname" placeholder="Ihr Nachname" required><br>
-			<br><label for="vname">Vorname:</label>
-			  <input type="text" name="vname" id="vname" placeholder="Ihr Vorname" required><br>
-			<br><label for="email">E-Mail:</label>
-			  <input type="email" name="email" id="email" placeholder="E-Mail-Adresse" required><br>
-			<br><label for="plz">Postleitzahl:</label>
-			  <input type="text" maxlength="5" pattern="[0-9]{5}" name="plz" id="plz" required><br>
-	 	    <br><label for="ort">Ort:</label>
-			  <input type="text" name="ort" id="ort" placeholder="Ihr Wohnort" required><br>
-			<br><label for="straße">Straße:</label>
-			  <input type="text" name="straße" id="straße" placeholder="Ihre Straße" required><br>
-			<br><label for="hausnummer">Hausnummer:</label>
-			  <input type="text" name="hausnummer" id="hausnummer" placeholder="Ihre Hausnummer" required><br>
-			<br><label class="textarea" for="anmerkung">Anmerkung:</label><br>
-			  <textarea name="anmerkung" id="anmerkung" placeholder="Hier Anmerkungen eingeben..." rows="8"></textarea>
-			<br><button type="submit" name="submit" value="submit">Absenden</button>
-			<button type="reset" name="reset" value="reset">Zurücksetzen</button>
+		<form id="registrieren" method="post" action="../registrierenservlet" accept-charset="utf-8">
+			<fieldset><legend>Registrierung</legend>
+				<div>
+					<label for="titel">Titel:</label>
+			  		<input type="text" list="titelList" name="titel" id="titel" autofocus required>
+			  		<span></span>
+					<label for="titel"></label>
+					<datalist id="titelList">
+						<option value="Herr">
+						<option value="Frau">
+					</datalist>
+				</div>	
+				<div>
+					<label for="nname">Name:</label>
+			  		<input type="text" name="nname" id="nname" placeholder="Ihr Name" required>
+			  		<span></span>
+				</div>
+				<div>
+					<label for="vname">Vorname:</label>
+			  		<input type="text" name="vname" id="vname" placeholder="Ihr Vorname" required>
+			  		<span></span>
+				</div>
+				<div>
+					<label for="mail">E-Mail:</label>
+			  		<input type="email" name="email" id="email" placeholder="E-Mail-Adresse" required>
+			  		<span></span>
+				</div>
+				<div>	
+					<label for="plz">Postleitzahl:</label>
+			  		<input type="number" max = 99999 name="plz" id="plz" placeholder="Ihre Postleitzahl" required>
+			  		<span></span>
+				</div>
+				<div>	
+			 		<label for="ort">Ort:</label>
+			  		<input type="text" name="ort" id="ort" placeholder="Ihr Wohnort" required>
+			  		<span></span>
+				</div>
+				<div>
+				<div></div>
+					<label for="straße">Straße:</label>
+			  		<input type="text"  name="straße" id="straße" placeholder="Ihre Straße" required>
+			  		<span></span>
+				</div>	
+				<div>		
+					<label for="hausnummer">Hausnummer:</label>
+			  		<input type="text" maxlength= "4" name="hausnummer" id="hausnummer" placeholder="Ihre Hausnummer" required>
+			  		<span></span>
+				</div>
+				<div>	
+					<label class="textarea" for="anmerkung">Anmerkung:</label>
+			  		<textarea name="anmerkung" id="anmerkung" placeholder="Hier Anmerkungen eingeben..." rows="8"></textarea>
+				</div>	
+				<div>
+					<button type="submit" name="submit" value="submit">Absenden</button>
+					<button type="reset" name="reset" value="reset">Zurücksetzen</button>
+				</div>	
+				<p>(*) = Pflichtfeld</p>
+			</fieldset>
 		</form>
-		<br>
 		<hr>
 		<footer>
 			<a href="homepage.html">Zur Startseite</a> |
